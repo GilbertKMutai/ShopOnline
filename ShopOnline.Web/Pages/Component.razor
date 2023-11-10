@@ -3,8 +3,7 @@
 @using ShopOnline.Web.Pages;
 @inherits ProductsBase
 
-<h3>Products</h3>
-@if(Products == null)
+@if (Products == null)
 {
     <h3>Products Loading....</h3>
 }
@@ -14,12 +13,12 @@ else
 
     var productCount = Products.Count();
 
-    @if(productCount > 0)
+    @if (productCount > 0)
     {
         const int itemsPerRow = 4;
         var productRowList = new List<ProductDto>();
 
-       @for(int i = 0; i < productCount; i++)
+        @for (int i = 0; i < productCount; i++)
         {
             productRowList = Products.Skip(i * itemsPerRow).Take(itemsPerRow).ToList();
 
@@ -47,4 +46,3 @@ else
         }
     }
 }
-
