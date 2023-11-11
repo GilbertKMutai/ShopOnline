@@ -23,12 +23,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseCors(policy =>
-                policy.WithOrigins("https://localhost:7174", "http://localhost:7174")
-                .AllowAnyMethod()
-                .WithHeaders(HeaderNames.ContentType));
+   
 }
 
+app.UseCors(policy =>
+               policy.WithOrigins("http://localhost:7174", "https://localhost:7174")
+               .AllowAnyMethod()
+               .WithHeaders(HeaderNames.ContentType)
+               );
 
 app.UseHttpsRedirection();
 
