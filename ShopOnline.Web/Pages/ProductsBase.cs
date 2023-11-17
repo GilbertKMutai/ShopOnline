@@ -15,6 +15,7 @@ namespace ShopOnline.Web.Pages
             Products = await ProductService.GetItems();
         }
 
+        // GetProductsByGroupCategory variable contains list of all the groups 
         protected IOrderedEnumerable<IGrouping<int, ProductDto>> GetProductsByGroupCategory()
         {
             return from product in Products
