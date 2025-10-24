@@ -1,1 +1,1 @@
-#ShopOnline
+#ShopOnline with Blazor WebAssembly
